@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cordiona Fandangueira | Official Links</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    .glass-btn {
+      background: transparent;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      transition: all 0.3s ease;
+    }
+    .glass-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.8);
+    }
+    .yt-bg-wrapper {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: -20;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .yt-bg-wrapper iframe {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100vw;
+      height: 56.25vw;
+      min-height: 100vh;
+      min-width: 177.77vh;
+      transform: translate(-50%, -50%) scale(1.2);
+      filter: blur(4px);
+    }
+  </style>
+</head>
+<body class="relative min-h-screen bg-black text-white font-sans antialiased overflow-x-hidden">
+
+  <!-- YOUTUBE BACKGROUND -->
+  <div class="yt-bg-wrapper">
+    <iframe 
+      src="https://www.youtube.com/embed/_RenQ3ezPZk?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=_RenQ3ezPZk&playsinline=1&vq=medium" 
+      frameborder="0" 
+      allow="autoplay; encrypted-media" 
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <!-- OVERLAY ESCURO -->
+  <div class="fixed inset-0 bg-black/60 -z-10"></div>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="max-w-md mx-auto min-h-screen px-5 py-8 flex flex-col items-center">
+    
+    <!-- LOGO DA BANDA -->
+    <img 
+      src="1000439810.png" 
+      alt="Logo Cordiona Fandangueira" 
+      class="h-16 md:h-20 object-contain mix-blend-screen mb-6"
+    />
+
+    <!-- PERFIL -->
+    <div class="w-full flex flex-col items-center text-center">
+      <div class="relative w-28 h-28 mb-3">
+        <img 
+          src="1000495878.jpg" 
+          alt="Foto da Banda" 
+          class="w-full h-full rounded-full object-cover border-2 border-white/20 shadow-2xl"
+        />
+      </div>
+      
+      <h1 class="text-xl font-medium tracking-wide">CORDIONA FANDANGUEIRA</h1>
+      <p class="text-sm text-zinc-200 mt-1 mb-1">Tchê, segue a gente e fica por dentro! 👇</p>
+      <p class="text-xs text-zinc-300">Assista ao novo clipe live no YouTube!</p>
+    </div>
+
+    <!-- LINKS -->
+    <div class="w-full space-y-3 mt-6">
+      
+      <a href="https://www.youtube.com/watch?v=_RenQ3ezPZk" target="_blank" rel="noopener noreferrer" 
+         class="bg-white text-black font-bold w-full py-3.5 px-5 rounded-full flex items-center justify-center gap-2 hover:bg-gray-200 transition-colors shadow-lg">
+        <i class="fa-brands fa-youtube text-red-600 text-xl"></i>
+        <span class="text-[13px] tracking-wide">ASSISTA AO NOVO CLIPE NO YOUTUBE</span>
+      </a>
+
+      <a href="https://open.spotify.com/artist/1q0jq42nu8bgWpz3cPhahD?si=v6pabgy7TVaagQti8u3KRw" target="_blank" rel="noopener noreferrer" 
+         class="glass-btn w-full py-3.5 px-5 rounded-full flex items-center justify-center gap-3">
+        <i class="fa-brands fa-spotify text-xl"></i>
+        <span class="font-medium text-sm tracking-wide">OUVIR NO SPOTIFY</span>
+      </a>
+
+      <a href="https://link.deezer.com/s/344RGLC0RgHwqJ9lhP67M" target="_blank" rel="noopener noreferrer" 
+         class="glass-btn w-full py-3.5 px-5 rounded-full flex items-center justify-center gap-3">
+        <i class="fa-brands fa-deezer text-xl"></i>
+        <span class="font-medium text-sm tracking-wide">OUVIR NO DEEZER</span>
+      </a>
+
+      <a href="#" target="_blank" rel="noopener noreferrer" 
+         class="glass-btn w-full py-3.5 px-5 rounded-full flex items-center justify-center gap-3">
+        <i class="fa-brands fa-instagram text-xl"></i>
+        <span class="font-medium text-sm tracking-wide">SEGUIR NO INSTAGRAM</span>
+      </a>
+
+      <a href="#" target="_blank" rel="noopener noreferrer" 
+         class="glass-btn w-full py-3.5 px-5 rounded-full flex items-center justify-center gap-3">
+        <i class="fa-brands fa-facebook text-xl"></i>
+        <span class="font-medium text-sm tracking-wide">SEGUIR NO FACEBOOK</span>
+      </a>
+
+      <a href="#" target="_blank" rel="noopener noreferrer" 
+         class="glass-btn w-full py-3.5 px-5 rounded-full flex items-center justify-center gap-3">
+        <i class="fa-brands fa-whatsapp text-xl"></i>
+        <span class="font-medium text-sm tracking-wide">CONTATO PARA SHOWS (WHATSAPP)</span>
+      </a>
+
+    </div>
+
+    <!-- AGENDA DE SHOWS -->
+    <div class="w-full mt-8">
+      <div class="text-center mb-4">
+        <h2 class="text-sm font-bold uppercase tracking-wider text-white">Agenda de Shows</h2>
+      </div>
+      
+      <div class="flex flex-col gap-3 text-sm text-zinc-200">
+        <div class="flex items-center justify-center gap-2">
+          <i class="fa-regular fa-calendar text-zinc-400"></i>
+          <span>15 Ago - CTG Gildo de Freitas - Porto Alegre, RS</span>
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <i class="fa-regular fa-calendar text-zinc-400"></i>
+          <span>22 Ago - Festival de Inverno - Gramado, RS</span>
+        </div>
+        <div class="flex items-center justify-center gap-2">
+          <i class="fa-regular fa-calendar text-zinc-400"></i>
+          <span>05 Set - Clube do Guri - Curitiba, PR</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- REDES SOCIAIS & RODAPÉ -->
+    <footer class="w-full flex flex-col items-center mt-12 gap-3 pb-8">
+      <div class="flex gap-6 text-xl text-zinc-300">
+        <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+      <p class="text-[10px] uppercase tracking-widest text-zinc-500 mt-2">© Cordiona Fandangueira</p>
+    </footer>
+
+  </main>
+
+</body>
+</html>
+
+
