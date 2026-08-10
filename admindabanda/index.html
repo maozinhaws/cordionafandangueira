@@ -1,1 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Cordiona Fandangueira</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body class="bg-gray-900 text-white min-h-screen p-6 font-sans">
+  <div id="app" class="max-w-4xl mx-auto flex gap-6 flex-col md:flex-row">
+    
+    <div class="w-full md:w-2/3 bg-gray-800 rounded-xl p-6 shadow-xl h-fit border border-gray-700">
+      <div class="flex justify-between items-center mb-6 border-b border-gray-700 pb-4">
+        <h1 class="text-2xl font-bold"><i class="fa-solid fa-gear mr-2 text-emerald-500"></i> Painel de Administração</h1>
+        <button @click="saveData" class="bg-emerald-600 hover:bg-emerald-500 px-4 py-2 rounded text-sm font-bold transition-colors">
+          <i class="fa-solid fa-floppy-disk mr-2"></i> Salvar Dados
+        </button>
+      </div>
+
+      <section class="mb-8">
+        <h2 class="text-lg font-bold text-gray-300 mb-4 uppercase tracking-wider"><i class="fa-solid fa-image mr-2"></i> Mídia e Textos Base</h2>
+        <div class="grid grid-cols-1 gap-4">
+          <div>
+            <label class="block text-xs text-gray-400 mb-1">URL Logo (Ex: 1000439810.png)</label>
+            <input v-model="site.logo" class="w-full bg-gray-900 border border-gray-700 rounded p-2 text-sm focus:border-emerald-500 outline-none">
+          </div>
+          <div>
+            <label class="block text-xs text-gray-400 mb-1">URL Foto Perfil (Ex: 1000495878.jpg)</label>
+            <input v-model="site.profilePic" class="w-full bg-gray-900 border border-gray-700 rounded p-2 text-sm focus:border-emerald-500 outline-none">
+          </div>
+          <div>
+            <label class="block text-xs text-gray-400 mb-1">ID Vídeo Background YouTube (Ex: _RenQ3ezPZk)</label>
+            <input v-model="site.bgVideoId" class="w-full bg-gray-900 border border-gray-700 rounded p-2 text-sm focus:border-emerald-500 outline-none">
+          </div>
+          <div>
+            <label class="block text-xs text-gray-400 mb-1">Nome da Banda</label>
+            <input v-model="site.name" class="w-full bg-gray-900 border border-gray-700 rounded p-2 text-sm focus:border-emerald-500 outline-none">
+          </div>
+          <div>
+            <label class="block text-xs text-gray-400 mb-1">Texto da Bio</label>
+            <input v-model="site.bio" class="w-full bg-gray-900 border border-gray-700 rounded p-2 text-sm focus:border-emerald-500 outline-none">
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="text-lg font-bold text-gray-300 mb-4 uppercase tracking-wider"><i class="fa-solid fa-code mr-2"></i> Embeds Principais</h2>
+        <div class="grid grid-cols-1 gap-4">
+          <div>
+            <label class="block text-xs text-gray-400 mb-1">ID Clipe Destaque YouTube</label>
+            <input v-model="site.highlightYoutube" class="w-full bg-gray-900 border border-gray-700 rounded p-2 text-sm focus:border-emerald-500 outline-none">
+          </div>
+          <div>
+            <label class="block text-xs text-gray-400 mb-1">ID Artista Spotify (Ex: 1q0jq42nu8bgWpz3cPhahD)</label>
+            <input v-model="site.spotifyId" class="w-full bg-gray-900 border border-gray-700 rounded p-2 text-sm focus:border-emerald-500 outline-none">
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-8">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-lg font-bold text-gray-300 uppercase tracking-wider"><i class="fa-solid fa-link mr-2"></i> Links de Botões</h2>
+          <button @click="addLink" class="bg-blue-600 hover:bg-blue-500 px-3 py-1 rounded text-xs"><i class="fa-solid fa-plus"></i> Add Link</button>
+        </div>
+        <div v-for="(link, index) in site.links" :key="index" class="flex gap-2 mb-2 items-center bg-gray-900 p-3 rounded border border-gray-700">
+          <input v-model="link.icon" placeholder="fa-brands fa-instagram" class="w-1/4 bg-gray-800 border border-gray-600 rounded p-2 text-xs">
+          <input v-model="link.label" placeholder="Título do Link" class="w-1/4 bg-gray-800 border border-gray-600 rounded p-2 text-xs">
+          <input v-model="link.url" placeholder="URL (https://...)" class="w-2/4 bg-gray-800 border border-gray-600 rounded p-2 text-xs">
+          <button @click="removeLink(index)" class="text-red-500 hover:text-red-400 p-2"><i class="fa-solid fa-trash"></i></button>
+        </div>
+      </section>
+
+      <section class="mb-8">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-lg font-bold text-gray-300 uppercase tracking-wider"><i class="fa-brands fa-instagram mr-2"></i> Grade do Instagram</h2>
+          <button @click="addIgPost" class="bg-fuchsia-600 hover:bg-fuchsia-500 px-3 py-1 rounded text-xs"><i class="fa-solid fa-plus"></i> Add Post</button>
+        </div>
+        <p class="text-xs text-gray-400 mb-2">Cole o link completo do post ou reel. O painel extrai o ID automaticamente.</p>
+        <div v-for="(post, index) in site.igPosts" :key="index" class="flex gap-2 mb-2 items-center bg-gray-900 p-3 rounded border border-gray-700">
+          <input v-model="post.url" placeholder="https://www.instagram.com/p/..." class="w-full bg-gray-800 border border-gray-600 rounded p-2 text-xs">
+          <button @click="removeIgPost(index)" class="text-red-500 hover:text-red-400 p-2"><i class="fa-solid fa-trash"></i></button>
+        </div>
+      </section>
+
+      <section class="mb-4">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-lg font-bold text-gray-300 uppercase tracking-wider"><i class="fa-solid fa-calendar mr-2"></i> Agenda de Shows</h2>
+          <button @click="addAgenda" class="bg-yellow-600 hover:bg-yellow-500 px-3 py-1 rounded text-xs"><i class="fa-solid fa-plus"></i> Add Show</button>
+        </div>
+        <div v-for="(show, index) in site.agenda" :key="index" class="flex gap-2 mb-2 items-center bg-gray-900 p-3 rounded border border-gray-700">
+          <input v-model="show.date" placeholder="15 Ago" class="w-1/4 bg-gray-800 border border-gray-600 rounded p-2 text-xs">
+          <input v-model="show.local" placeholder="CTG Gildo de Freitas" class="w-1/4 bg-gray-800 border border-gray-600 rounded p-2 text-xs">
+          <input v-model="show.city" placeholder="Porto Alegre, RS" class="w-2/4 bg-gray-800 border border-gray-600 rounded p-2 text-xs">
+          <button @click="removeAgenda(index)" class="text-red-500 hover:text-red-400 p-2"><i class="fa-solid fa-trash"></i></button>
+        </div>
+      </section>
+    </div>
+
+    <div class="w-full md:w-1/3 flex flex-col gap-4">
+      <div class="bg-gray-800 rounded-xl p-6 shadow-xl border border-gray-700 sticky top-6">
+        <h2 class="text-xl font-bold mb-4"><i class="fa-solid fa-rocket mr-2"></i> Publicar Site</h2>
+        <p class="text-sm text-gray-400 mb-6">Ao finalizar as edições, gere o código do site para enviá-lo ao GitHub Pages.</p>
+        
+        <button @click="generateCode" class="w-full bg-blue-600 hover:bg-blue-500 py-3 rounded font-bold text-white mb-4 transition-colors">
+          1. Gerar Código Atualizado
+        </button>
+
+        <button v-if="generatedHtml" @click="downloadHtml" class="w-full bg-emerald-600 hover:bg-emerald-500 py-3 rounded font-bold text-white transition-colors">
+          2. Baixar index.html (Público)
+        </button>
+
+        <div v-if="generatedHtml" class="mt-4">
+          <label class="block text-xs text-gray-400 mb-1">Ou copie o código bruto (Para a raiz do repo):</label>
+          <textarea v-model="generatedHtml" class="w-full h-48 bg-gray-900 border border-gray-700 rounded p-2 text-xs font-mono text-gray-300 outline-none" readonly></textarea>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const { createApp, ref, onMounted } = Vue;
+
+    createApp({
+      setup() {
+        const defaultData = {
+          logo: '1000439810.png',
+          profilePic: '1000495878.jpg',
+          bgVideoId: '_RenQ3ezPZk',
+          name: 'CORDIONA FANDANGUEIRA',
+          bio: 'Tchê, segue a gente e fica por dentro! 👇',
+          highlightYoutube: '_RenQ3ezPZk',
+          spotifyId: '1q0jq42nu8bgWpz3cPhahD',
+          links: [
+            { icon: 'fa-brands fa-deezer', label: 'OUVIR NO DEEZER', url: 'https://link.deezer.com/s/344RGLC0RgHwqJ9lhP67M' },
+            { icon: 'fa-brands fa-whatsapp', label: 'CONTATO PARA SHOWS', url: '#' }
+          ],
+          igPosts: [
+            { url: 'https://www.instagram.com/p/CwXYZ123abc/' }
+          ],
+          agenda: [
+            { date: '15 Ago', local: 'CTG Gildo de Freitas', city: 'Porto Alegre, RS' },
+            { date: '22 Ago', local: 'Festival de Inverno', city: 'Gramado, RS' }
+          ]
+        };
+
+        const site = ref(defaultData);
+        const generatedHtml = ref('');
+
+        onMounted(() => {
+          const saved = localStorage.getItem('cordiona_admin_data');
+          if (saved) {
+            try {
+              site.value = JSON.parse(saved);
+            } catch (e) {
+              console.error("Erro ao carregar dados", e);
+            }
+          }
+        });
+
+        const saveData = () => {
+          localStorage.setItem('cordiona_admin_data', JSON.stringify(site.value));
+          alert('Dados salvos no navegador.');
+        };
+
+        const addLink = () => site.value.links.push({ icon: 'fa-solid fa-link', label: 'Novo Link', url: '#' });
+        const removeLink = (idx) => site.value.links.splice(idx, 1);
+        
+        const addAgenda = () => site.value.agenda.push({ date: '', local: '', city: '' });
+        const removeAgenda = (idx) => site.value.agenda.splice(idx, 1);
+
+        const addIgPost = () => site.value.igPosts.push({ url: '' });
+        const removeIgPost = (idx) => site.value.igPosts.splice(idx, 1);
+
+        const extractIgId = (url) => {
+          if (!url) return null;
+          const match = url.match(/(?:p|reel)\/([a-zA-Z0-9_-]+)/);
+          return match ? match[1] : null;
+        };
+
+        const generateCode = () => {
+          let linksHtml = site.value.links.map(l => `
+      <a href="${l.url}" target="_blank" rel="noopener noreferrer" 
+         class="glass-btn w-full py-3.5 px-5 rounded-full flex items-center justify-center gap-3">
+        <i class="${l.icon} text-xl"></i>
+        <span class="font-medium text-sm tracking-wide">${l.label}</span>
+      </a>`).join('\n');
+
+          let agendaHtml = site.value.agenda.map(a => `
+        <div class="flex items-center justify-center gap-2">
+          <i class="fa-regular fa-calendar text-zinc-400"></i>
+          <span>${a.date} - ${a.local} - ${a.city}</span>
+        </div>`).join('\n');
+
+          let igHtml = '';
+          const validIgPosts = site.value.igPosts.map(p => extractIgId(p.url)).filter(id => id);
+          if (validIgPosts.length > 0) {
+            igHtml = `
+      <!-- GRADE INSTAGRAM -->
+      <div class="w-full mt-6">
+        <h2 class="text-sm font-bold uppercase tracking-wider text-white text-center mb-4"><i class="fa-brands fa-instagram"></i> No Instagram</h2>
+        <div class="grid grid-cols-2 gap-2">
+          ${validIgPosts.map(id => `
+          <div class="w-full overflow-hidden rounded-xl border border-white/20 bg-black aspect-square">
+            <iframe src="https://www.instagram.com/p/${id}/embed/captioned" width="100%" height="400" frameborder="0" scrolling="no" allowtransparency="true" class="scale-[0.8] origin-top-left w-[125%] h-[125%] pointer-events-none"></iframe>
+            <a href="https://instagram.com/p/${id}" target="_blank" class="absolute inset-0 z-10"></a>
+          </div>`).join('')}
+        </div>
+      </div>`;
+          }
+
+          generatedHtml.value = `<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>${site.value.name} | Official Links</title>
+  <script src="https://cdn.tailwindcss.com"><\/script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    .glass-btn {
+      background: transparent;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      transition: all 0.3s ease;
+    }
+    .glass-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.8);
+    }
+    .yt-bg-wrapper {
+      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      z-index: -20; overflow: hidden; pointer-events: none;
+    }
+    .yt-bg-wrapper iframe {
+      position: absolute; top: 50%; left: 50%;
+      width: 100vw; height: 56.25vw; min-height: 100vh; min-width: 177.77vh;
+      transform: translate(-50%, -50%) scale(1.2); filter: blur(4px);
+    }
+  </style>
+</head>
+<body class="relative min-h-screen bg-black text-white font-sans antialiased overflow-x-hidden">
+
+  <!-- YOUTUBE BACKGROUND -->
+  <div class="yt-bg-wrapper">
+    <iframe src="https://www.youtube-nocookie.com/embed/${site.value.bgVideoId}?autoplay=1&mute=1&controls=0&rel=0&loop=1&playlist=${site.value.bgVideoId}&playsinline=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+  <div class="fixed inset-0 bg-black/60 -z-10"></div>
+
+  <main class="max-w-md mx-auto min-h-screen px-5 py-8 flex flex-col items-center">
+    
+    <img src="${site.value.logo}" alt="Logo" class="h-16 md:h-20 object-contain mix-blend-screen mb-6" />
+
+    <div class="w-full flex flex-col items-center text-center">
+      <div class="relative w-28 h-28 mb-3">
+        <img src="${site.value.profilePic}" alt="Foto" class="w-full h-full rounded-full object-cover border-2 border-white/20 shadow-2xl" />
+      </div>
+      <h1 class="text-xl font-medium tracking-wide uppercase">${site.value.name}</h1>
+      <p class="text-sm text-zinc-200 mt-1 mb-1">${site.value.bio}</p>
+    </div>
+
+    <div class="w-full space-y-4 mt-6">
+      
+      <div class="w-full rounded-xl overflow-hidden shadow-lg border border-white/20">
+        <div class="relative w-full pb-[56.25%] h-0">
+          <iframe src="https://www.youtube-nocookie.com/embed/${site.value.highlightYoutube}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full"></iframe>
+        </div>
+      </div>
+
+      <div class="w-full rounded-xl overflow-hidden shadow-lg border border-white/20">
+         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/${site.value.spotifyId}?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+${linksHtml}
+    </div>
+${igHtml}
+    <div class="w-full mt-8">
+      <div class="text-center mb-4">
+        <h2 class="text-sm font-bold uppercase tracking-wider text-white">Agenda de Shows</h2>
+      </div>
+      <div class="flex flex-col gap-3 text-sm text-zinc-200">
+${agendaHtml}
+      </div>
+    </div>
+
+    <footer class="w-full flex flex-col items-center mt-12 gap-3 pb-8">
+      <p class="text-[10px] uppercase tracking-widest text-zinc-500 mt-2">© ${site.value.name}</p>
+    </footer>
+
+  </main>
+</body>
+</html>`;
+        };
+
+        const downloadHtml = () => {
+          const blob = new Blob([generatedHtml.value], { type: 'text/html' });
+          const url = window.URL.createObjectURL(blob);
+          const a = document.createElement('a');
+          a.href = url;
+          a.download = 'index.html';
+          a.click();
+          window.URL.revokeObjectURL(url);
+        };
+
+        return {
+          site,
+          generatedHtml,
+          saveData,
+          addLink,
+          removeLink,
+          addAgenda,
+          removeAgenda,
+          addIgPost,
+          removeIgPost,
+          generateCode,
+          downloadHtml
+        };
+      }
+    }).mount('#app');
+  </script>
+</body>
+</html>
+
 
