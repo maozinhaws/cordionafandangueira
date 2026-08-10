@@ -43,7 +43,7 @@
   <!-- YOUTUBE BACKGROUND -->
   <div class="yt-bg-wrapper">
     <iframe 
-      src="https://www.youtube.com/embed/_RenQ3ezPZk?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&loop=1&playlist=_RenQ3ezPZk&playsinline=1&vq=medium" 
+      src="https://www.youtube-nocookie.com/embed/_RenQ3ezPZk?autoplay=1&mute=1&controls=0&rel=0&loop=1&playlist=_RenQ3ezPZk&playsinline=1" 
       frameborder="0" 
       allow="autoplay; encrypted-media" 
       allowfullscreen>
@@ -75,24 +75,39 @@
       
       <h1 class="text-xl font-medium tracking-wide">CORDIONA FANDANGUEIRA</h1>
       <p class="text-sm text-zinc-200 mt-1 mb-1">Tchê, segue a gente e fica por dentro! 👇</p>
-      <p class="text-xs text-zinc-300">Assista ao novo clipe live no YouTube!</p>
     </div>
 
     <!-- LINKS -->
-    <div class="w-full space-y-3 mt-6">
+    <div class="w-full space-y-4 mt-6">
       
-      <a href="https://www.youtube.com/watch?v=_RenQ3ezPZk" target="_blank" rel="noopener noreferrer" 
-         class="bg-white text-black font-bold w-full py-3.5 px-5 rounded-full flex items-center justify-center gap-2 hover:bg-gray-200 transition-colors shadow-lg">
-        <i class="fa-brands fa-youtube text-red-600 text-xl"></i>
-        <span class="text-[13px] tracking-wide">ASSISTA AO NOVO CLIPE NO YOUTUBE</span>
-      </a>
+      <!-- EMBED YOUTUBE (Player direto na página) -->
+      <div class="w-full rounded-xl overflow-hidden shadow-lg border border-white/20">
+        <div class="relative w-full pb-[56.25%] h-0">
+          <iframe 
+            src="https://www.youtube-nocookie.com/embed/_RenQ3ezPZk" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen
+            class="absolute top-0 left-0 w-full h-full">
+          </iframe>
+        </div>
+      </div>
 
-      <a href="https://open.spotify.com/artist/1q0jq42nu8bgWpz3cPhahD?si=v6pabgy7TVaagQti8u3KRw" target="_blank" rel="noopener noreferrer" 
-         class="glass-btn w-full py-3.5 px-5 rounded-full flex items-center justify-center gap-3">
-        <i class="fa-brands fa-spotify text-xl"></i>
-        <span class="font-medium text-sm tracking-wide">OUVIR NO SPOTIFY</span>
-      </a>
+      <!-- EMBED SPOTIFY -->
+      <div class="w-full rounded-xl overflow-hidden shadow-lg border border-white/20">
+         <iframe style="border-radius:12px" 
+           src="https://open.spotify.com/embed/artist/1q0jq42nu8bgWpz3cPhahD?utm_source=generator" 
+           width="100%" 
+           height="152" 
+           frameBorder="0" 
+           allowfullscreen="" 
+           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+           loading="lazy">
+         </iframe>
+      </div>
 
+      <!-- BOTÕES DE REDES E LINKS EXTERNOS -->
       <a href="https://link.deezer.com/s/344RGLC0RgHwqJ9lhP67M" target="_blank" rel="noopener noreferrer" 
          class="glass-btn w-full py-3.5 px-5 rounded-full flex items-center justify-center gap-3">
         <i class="fa-brands fa-deezer text-xl"></i>
