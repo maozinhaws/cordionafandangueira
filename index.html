@@ -1,175 +1,33 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cordiona Fandangueira | Official Links</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-  <style>
-    .glass-btn {
-      background: transparent;
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.4);
-      transition: all 0.3s ease;
-    }
-    .glass-btn:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(255, 255, 255, 0.8);
-    }
-    .yt-bg-wrapper {
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      z-index: -20;
-      overflow: hidden;
-      pointer-events: none;
-    }
-    .yt-bg-wrapper iframe {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 100vw;
-      height: 56.25vw;
-      min-height: 100vh;
-      min-width: 177.77vh;
-      transform: translate(-50%, -50%) scale(1.2);
-      filter: blur(4px);
-    }
-  </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cordiona Fandangueira — Música gaúcha para fazer o salão acontecer</title>
+<meta name="description" content="Banda gaúcha para bailes, CTGs, festas e eventos. Consulte a agenda e solicite uma proposta.">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.179.1/build/three.module.js"}}</script>
+<style>
+:root{--bg:#080604;--muted:#b9ab98;--red:#8d2018;--gold:#d5a64c;--line:#ffffff22}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:#f5eee4;font-family:Inter,system-ui,sans-serif}a{text-decoration:none;color:inherit}.nav{position:fixed;z-index:40;top:0;left:0;right:0;padding:18px 4vw;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(#080604ee,transparent);backdrop-filter:blur(8px)}.brand{font-weight:900;letter-spacing:.16em}.navlinks{display:flex;gap:24px;text-transform:uppercase;font-size:11px;letter-spacing:.14em}.cta{padding:11px 16px;border:1px solid var(--gold);border-radius:999px;color:var(--gold)}.hero{height:100svh;min-height:700px;position:relative;overflow:hidden}.scene{position:absolute;inset:0}.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 68% 45%,transparent 0,transparent 25%,#08060466 58%,#080604 100%);pointer-events:none}.heroText{position:relative;z-index:3;height:100%;width:min(1240px,90vw);margin:auto;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding-top:7vh}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.24em;color:var(--gold)}h1{font-family:Georgia,serif;font-size:clamp(4rem,9vw,9rem);line-height:.82;letter-spacing:-.07em;max-width:850px;margin:18px 0}.lead{max-width:600px;color:#d9cdbd;font-size:clamp(1rem,1.5vw,1.3rem);line-height:1.55}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{padding:15px 20px;border-radius:999px;border:1px solid var(--line);text-transform:uppercase;letter-spacing:.12em;font-size:11px;font-weight:800}.primary{background:var(--red);border-color:var(--red)}.gold{border-color:var(--gold);color:var(--gold)}.section{padding:120px 6vw}.inner{width:min(1240px,100%);margin:auto}.sectionTitle{font:clamp(2.8rem,6vw,6rem) Georgia,serif;line-height:.9;letter-spacing:-.06em;margin:14px 0 28px}.copy{max-width:760px;color:var(--muted);line-height:1.8}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:48px}.card{padding:30px;border:1px solid var(--line);border-radius:24px;background:#ffffff05;min-height:250px}.card b{color:var(--gold);font-size:12px;letter-spacing:.18em}.card h3{font:2.1rem Georgia,serif;margin:30px 0 12px}.card p{color:var(--muted);line-height:1.65}.media{margin-top:48px;display:grid;grid-template-columns:1.25fr .75fr;gap:16px}.video{min-height:500px;border-radius:28px;overflow:hidden;border:1px solid var(--line);background:#000}.video iframe{width:100%;height:100%;min-height:500px;border:0}.music{border:1px solid var(--line);border-radius:28px;padding:16px;background:#ffffff04}.music iframe{width:100%;border:0;border-radius:18px}.calendar{margin-top:45px}.calHead{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:20px}.calControls{display:flex;gap:7px}.calControls button{background:#ffffff06;color:#fff;border:1px solid var(--line);border-radius:999px;padding:9px 13px}.events{display:grid;gap:10px}.event{display:grid;grid-template-columns:90px 1fr auto;align-items:center;gap:18px;padding:18px;border:1px solid var(--line);border-radius:20px;background:#ffffff03}.date{border-right:1px solid var(--line)}.date strong{font:2.4rem Georgia,serif;display:block}.date span{text-transform:uppercase;color:var(--gold);font-size:10px;letter-spacing:.15em}.eventPlace{color:#9e9281;font-size:14px;margin-top:5px}.eventLink{color:var(--gold);font-size:10px;text-transform:uppercase;letter-spacing:.14em}.empty{padding:35px;border:1px dashed var(--line);border-radius:20px;text-align:center;color:#9e9281}.quote{margin-top:80px;border-left:3px solid var(--gold);padding:10px 0 10px 25px;font:clamp(2rem,4vw,4rem) Georgia,serif;max-width:950px}footer{padding:80px 6vw;border-top:1px solid var(--line);color:#8f8474}.reveal{opacity:0;transform:translateY(30px);transition:.8s cubic-bezier(.16,1,.3,1)}.show{opacity:1;transform:none}@media(max-width:850px){.navlinks a:not(.cta){display:none}.grid3,.media{grid-template-columns:1fr}.event{grid-template-columns:68px 1fr}.eventLink{display:none}.section{padding:85px 6vw}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none}}
+</style>
 </head>
-<body class="relative min-h-screen bg-black text-white font-sans antialiased overflow-x-hidden">
-
-  <!-- YOUTUBE BACKGROUND -->
-  <div class="yt-bg-wrapper">
-    <iframe 
-      src="https://www.youtube-nocookie.com/embed/_RenQ3ezPZk?autoplay=1&mute=1&controls=0&rel=0&loop=1&playlist=_RenQ3ezPZk&playsinline=1" 
-      frameborder="0" 
-      allow="autoplay; encrypted-media" 
-      allowfullscreen>
-    </iframe>
-  </div>
-
-  <!-- OVERLAY ESCURO -->
-  <div class="fixed inset-0 bg-black/60 -z-10"></div>
-
-  <!-- CONTEÚDO PRINCIPAL -->
-  <main class="max-w-md mx-auto min-h-screen px-5 py-8 flex flex-col items-center">
-    
-    <!-- LOGO DA BANDA -->
-    <img 
-      src="1000439810.png" 
-      alt="Logo Cordiona Fandangueira" 
-      class="h-16 md:h-20 object-contain mix-blend-screen mb-6"
-    />
-
-    <!-- PERFIL -->
-    <div class="w-full flex flex-col items-center text-center">
-      <div class="relative w-28 h-28 mb-3">
-        <img 
-          src="1000495878.jpg" 
-          alt="Foto da Banda" 
-          class="w-full h-full rounded-full object-cover border-2 border-white/20 shadow-2xl"
-        />
-      </div>
-      
-      <h1 class="text-xl font-medium tracking-wide">CORDIONA FANDANGUEIRA</h1>
-      <p class="text-sm text-zinc-200 mt-1 mb-1">Tchê, segue a gente e fica por dentro! 👇</p>
-    </div>
-
-    <!-- LINKS -->
-    <div class="w-full space-y-4 mt-6">
-      
-      <!-- EMBED YOUTUBE (Player direto na página) -->
-      <div class="w-full rounded-xl overflow-hidden shadow-lg border border-white/20">
-        <div class="relative w-full pb-[56.25%] h-0">
-          <iframe 
-            src="https://www.youtube-nocookie.com/embed/_RenQ3ezPZk" 
-            title="YouTube video player" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen
-            class="absolute top-0 left-0 w-full h-full">
-          </iframe>
-        </div>
-      </div>
-
-      <!-- EMBED SPOTIFY -->
-      <div class="w-full rounded-xl overflow-hidden shadow-lg border border-white/20">
-         <iframe style="border-radius:12px" 
-           src="https://open.spotify.com/embed/artist/1q0jq42nu8bgWpz3cPhahD?utm_source=generator" 
-           width="100%" 
-           height="152" 
-           frameBorder="0" 
-           allowfullscreen="" 
-           allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-           loading="lazy">
-         </iframe>
-      </div>
-
-      <!-- BOTÕES DE REDES E LINKS EXTERNOS -->
-      <a href="https://link.deezer.com/s/344RGLC0RgHwqJ9lhP67M" target="_blank" rel="noopener noreferrer" 
-         class="glass-btn w-full py-3.5 px-5 rounded-full flex items-center justify-center gap-3">
-        <i class="fa-brands fa-deezer text-xl"></i>
-        <span class="font-medium text-sm tracking-wide">OUVIR NO DEEZER</span>
-      </a>
-
-      <a href="#" target="_blank" rel="noopener noreferrer" 
-         class="glass-btn w-full py-3.5 px-5 rounded-full flex items-center justify-center gap-3">
-        <i class="fa-brands fa-instagram text-xl"></i>
-        <span class="font-medium text-sm tracking-wide">SEGUIR NO INSTAGRAM</span>
-      </a>
-
-      <a href="#" target="_blank" rel="noopener noreferrer" 
-         class="glass-btn w-full py-3.5 px-5 rounded-full flex items-center justify-center gap-3">
-        <i class="fa-brands fa-facebook text-xl"></i>
-        <span class="font-medium text-sm tracking-wide">SEGUIR NO FACEBOOK</span>
-      </a>
-
-      <a href="#" target="_blank" rel="noopener noreferrer" 
-         class="glass-btn w-full py-3.5 px-5 rounded-full flex items-center justify-center gap-3">
-        <i class="fa-brands fa-whatsapp text-xl"></i>
-        <span class="font-medium text-sm tracking-wide">CONTATO PARA SHOWS (WHATSAPP)</span>
-      </a>
-
-    </div>
-
-    <!-- AGENDA DE SHOWS -->
-    <div class="w-full mt-8">
-      <div class="text-center mb-4">
-        <h2 class="text-sm font-bold uppercase tracking-wider text-white">Agenda de Shows</h2>
-      </div>
-      
-      <div class="flex flex-col gap-3 text-sm text-zinc-200">
-        <div class="flex items-center justify-center gap-2">
-          <i class="fa-regular fa-calendar text-zinc-400"></i>
-          <span>15 Ago - CTG Gildo de Freitas - Porto Alegre, RS</span>
-        </div>
-        <div class="flex items-center justify-center gap-2">
-          <i class="fa-regular fa-calendar text-zinc-400"></i>
-          <span>22 Ago - Festival de Inverno - Gramado, RS</span>
-        </div>
-        <div class="flex items-center justify-center gap-2">
-          <i class="fa-regular fa-calendar text-zinc-400"></i>
-          <span>05 Set - Clube do Guri - Curitiba, PR</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- REDES SOCIAIS & RODAPÉ -->
-    <footer class="w-full flex flex-col items-center mt-12 gap-3 pb-8">
-      <div class="flex gap-6 text-xl text-zinc-300">
-        <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-youtube"></i></a>
-        <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-facebook"></i></a>
-        <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
-      </div>
-      <p class="text-[10px] uppercase tracking-widest text-zinc-500 mt-2">© Cordiona Fandangueira</p>
-    </footer>
-
-  </main>
-
-</body>
-</html>
-
-
+<body>
+<nav class="nav"><a class="brand" href="#">CORDIONA<br>FANDANGUEIRA</a><div class="navlinks"><a href="#experiencia">Experiência</a><a href="#video">Show</a><a href="#agenda">Agenda</a><a class="cta" href="#contrate">Contrate a banda</a></div></nav>
+<header class="hero"><div id="scene" class="scene"></div><div class="heroText"><span class="eyebrow">Música gaúcha • baile • evento • tradição</span><h1>O baile<br>começa<br>na gaita.</h1><p class="lead">Uma experiência musical gaúcha pensada para fazer o público dançar — e para o seu evento ser lembrado.</p><div class="buttons"><a class="btn primary" href="#contrate">Quero contratar</a><a class="btn gold" href="#agenda">Ver agenda</a></div></div></header>
+<main>
+<section id="experiencia" class="section reveal"><div class="inner"><span class="eyebrow">Por que Cordiona Fandangueira</span><h2 class="sectionTitle">Não vendemos só música.<br>Vendemos o clima do baile.</h2><p class="copy">A página foi reorganizada para quem decide a contratação: produtor, dono de casa, CTG, clube ou organizador. Em poucos segundos, o visitante entende o estilo, vê a banda em ação, consulta disponibilidade e encontra o caminho direto para pedir uma proposta.</p><div class="grid3"><article class="card"><b>01 / PRESENÇA</b><h3>Som que ocupa o salão</h3><p>Repertório e presença de palco para transformar a pista em baile, com identidade gaúcha do começo ao fim.</p></article><article class="card"><b>02 / EVENTO</b><h3>Feito para contratar</h3><p>Informações objetivas, agenda atualizada e CTA de orçamento sempre próximos do conteúdo que convence.</p></article><article class="card"><b>03 / TRADIÇÃO</b><h3>Raiz sem cara de passado</h3><p>Estética contemporânea, tecnologia 3D e linguagem visual inspiradas na cultura do Sul.</p></article></div></div></section>
+<section id="video" class="section reveal"><div class="inner"><span class="eyebrow">Veja o show</span><h2 class="sectionTitle">Antes de contratar,<br>sinta a energia.</h2><div class="media"><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/_RenQ3ezPZk" title="Cordiona Fandangueira" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture;web-share" allowfullscreen></iframe></div><div class="music"><span class="eyebrow">Ouça também</span><iframe style="margin-top:18px" height="352" src="https://open.spotify.com/embed/artist/1q0jq42nu8bgWpz3cPhahD?utm_source=generator" allow="autoplay;clipboard-write;encrypted-media;fullscreen;picture-in-picture" loading="lazy"></iframe><div class="buttons"><a class="btn gold" href="https://link.deezer.com/s/344RGLC0RgHwqJ9lhP67M" target="_blank" rel="noopener">Ouvir no Deezer</a></div></div></div></div></section>
+<section id="agenda" class="section reveal"><div class="inner"><span class="eyebrow">Disponibilidade</span><h2 class="sectionTitle">Agenda de shows</h2><p class="copy">O mês abre automaticamente na data do visitante. Use as setas para consultar outros meses. A fonte de eventos deve ser o calendário público oficial da banda.</p><div id="calendar" class="calendar"></div></div></section>
+<section id="contrate" class="section reveal"><div class="inner"><span class="eyebrow">Vamos conversar</span><h2 class="sectionTitle">Seu próximo baile<br>pode ter essa trilha.</h2><p class="copy">Para contratação, envie data, cidade, local e formato do evento. O contato comercial deve ser o CTA dominante desta página.</p><div class="buttons"><a class="btn primary" href="https://wa.me/?text=Olá! Quero contratar a Cordiona Fandangueira para um evento." target="_blank" rel="noopener">Solicitar proposta no WhatsApp</a><a class="btn gold" href="mailto:contato@cordionafandangueira.com?subject=Contratação%20Cordiona%20Fandangueira">Enviar e-mail</a></div><div class="quote">“Quando a gaita puxa, o salão responde.”</div></div></section>
+</main><footer><div class="inner"><strong>CORDIONA FANDANGUEIRA</strong><br><small>© <span id="year"></span> • Música gaúcha para eventos.</small></div></footer>
+<script type="module">
+import * as THREE from 'three';
+const host=document.querySelector('#scene'),scene=new THREE.Scene(),camera=new THREE.PerspectiveCamera(42,1,.1,100);camera.position.set(0,.7,10);
+const renderer=new THREE.WebGLRenderer({antialias:true,alpha:true,powerPreference:'high-performance'});renderer.setPixelRatio(Math.min(devicePixelRatio,1.6));renderer.setSize(innerWidth,innerHeight);renderer.outputColorSpace=THREE.SRGBColorSpace;host.appendChild(renderer.domElement);
+scene.add(new THREE.HemisphereLight(0xe9d8bd,0x160d08,2));const light=new THREE.PointLight(0xff692e,22,14);light.position.set(4,2,4);scene.add(light);const root=new THREE.Group();scene.add(root);
+const red=new THREE.MeshStandardMaterial({color:0x7c1915,roughness:.3,metalness:.15}),dark=new THREE.MeshStandardMaterial({color:0x12100e,roughness:.65}),gold=new THREE.MeshStandardMaterial({color:0xd4a34a,roughness:.3,metalness:.7});
+const g=new THREE.Group(),side=new THREE.BoxGeometry(2.4,1.8,.65),a=new THREE.Mesh(side,red),b=a.clone();a.position.x=-1.6;b.position.x=1.6;g.add(a,b);for(let i=0;i<9;i++){let f=new THREE.Mesh(new THREE.BoxGeometry(.33,1.45,.58),dark);f.position.x=-1.32+i*.33;f.rotation.z=i%2?.08:-.08;g.add(f)}for(let i=0;i<10;i++){let q=new THREE.Mesh(new THREE.CylinderGeometry(.07,.07,.12,16),gold);q.rotation.z=Math.PI/2;q.position.set(-1.95+(i%5)*.2,.42-Math.floor(i/5)*.42,.36);g.add(q)}let grill=new THREE.Mesh(new THREE.CylinderGeometry(.55,.55,.18,32),dark);grill.rotation.z=Math.PI/2;grill.position.set(1.95,0,.42);g.add(grill);g.position.set(1.7,.2,0);root.add(g);
+const sil=new THREE.Group(),sm=new THREE.MeshBasicMaterial({color:0x030303});let torso=new THREE.Mesh(new THREE.CapsuleGeometry(.8,1.6,6,12),sm);torso.position.y=1.1;sil.add(torso);let head=new THREE.Mesh(new THREE.SphereGeometry(.42,18,12),sm);head.position.y=2.5;sil.add(head);let hat=new THREE.Mesh(new THREE.CylinderGeometry(.72,.8,.2,24),sm);hat.position.y=2.86;sil.add(hat);let crown=new THREE.Mesh(new THREE.CylinderGeometry(.4,.48,.5,24),sm);crown.position.y=3.18;sil.add(crown);for(const x of[-.48,.48]){let l=new THREE.Mesh(new THREE.CapsuleGeometry(.21,1.1,6,10),sm);l.position.set(x,-.15,0);sil.add(l)}for(const x of[-.8,.8]){let ar=new THREE.Mesh(new THREE.CapsuleGeometry(.15,1.1,6,10),sm);ar.position.set(x*.72,1.3,0);ar.rotation.z=x>0?-.35:.35;sil.add(ar)}sil.position.set(-3,-.7,.2);root.add(sil);
+const pts=new Float32Array(700*3);for(let i=0;i<700;i++){pts[i*3]=(Math.random()-.5)*12;pts[i*3+1]=Math.random()*6-2;pts[i*3+2]=(Math.random()-.5)*4}let pg=new THREE.BufferGeometry();pg.setAttribute('position',new THREE.BufferAttribute(pts,3));root.add(new THREE.Points(pg,new THREE.PointsMaterial({color:0xd4a34a,size:.025,transparent:true,opacity:.5})));
+const pointer={x:0,y:0};addEventListener('pointermove',e=>{pointer.x=e.clientX/innerWidth*2-1;pointer.y=e.clientY/innerHeight*2-1},{passive:true});function resize(){let r=host.getBoundingClientRect();camera.aspect=r.width/r.height;camera.updateProjectionMatrix();renderer.setSize(r.width,r.height,false)}addEventListener('resize',resize);resize();function loop(){let t=performance.now()/1000;requestAnimationFrame(loop);g.rotation.y=-.35+pointer.x*.12+Math.sin(t*.45)*.04;g.rotation.x=pointer.y*.04;g.position.y=.2+Math.sin(t*1.3)*.08;sil.rotation.y=-pointer.x*.03;renderer.render(scene,camera)}loop();
+const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('show')),{threshold:.12});document.querySelectorAll('.reveal').forEach(e=>io.observe(e));document.querySelector('#year').textContent=new Date().getFullYear();
+let offset=0;function renderCal(){let n=new Date(),d=new Date(n.getFullYear(),n.getMonth()+offset,1),label=d.toLocaleDateString('pt-BR',{month:'long',year:'numeric'});document.querySelector('#calendar').innerHTML='<div class="calHead"><div><span class="eyebrow">MÊS</span><h3 class="sectionTitle" style="font-size:clamp(2rem,4vw,3.5rem);margin:5px 0;text-transform:capitalize">'+label+'</h3></div><div class="calControls"><button id="prev">←</button><button id="today">Hoje</button><button id="next">→</button></div></div><div class="events"><div class="empty">A integração com o Google Calendar está preparada. Configure o ID do calendário público para carregar os shows deste mês.</div></div>';document.querySelector('#prev').onclick=()=>{offset--;renderCal()};document.querySelector('#next').onclick=()=>{offset++;renderCal()};document.querySelector('#today').onclick=()=>{offset=0;renderCal()}}renderCal();
+</script></body></html>
