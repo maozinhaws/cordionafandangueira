@@ -3,131 +3,73 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#1a1a19">
-  <meta name="description" content="Cordiona Fandangueira — música gaúcha para bailes, CTGs, festas e eventos. Conheça a banda, assista, ouça e consulte uma data para o seu evento.">
+  <meta name="theme-color" content="#9c352b">
+  <meta name="description" content="Cordiona Fandangueira — gaita, baile e música gaúcha ao vivo. Veja a agenda, assista e ouça a banda.">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Cordiona Fandangueira — Música gaúcha, baile de verdade">
-  <meta property="og:description" content="A gaita puxa. O baile começa. Conheça a Cordiona Fandangueira e consulte uma data para o seu evento.">
+  <meta property="og:title" content="Cordiona Fandangueira — Chamou a gaita? É baile.">
+  <meta property="og:description" content="Da primeira vaneira ao último acorde — um show feito pra levantar o salão.">
   <meta property="og:image" content="media/cordiona-stage.webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://www.youtube-nocookie.com">
   <link rel="preconnect" href="https://open.spotify.com">
   <link rel="preload" as="image" href="media/cordiona-stage.webp" fetchpriority="high">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,500,30,1;9..144,600,20,1;9..144,700,10,1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="site.css">
-  <title>Cordiona Fandangueira — Música gaúcha para o seu evento</title>
+  <title>Cordiona Fandangueira — Chamou a gaita? É baile.</title>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="#topo" aria-label="Cordiona Fandangueira — início">
-        <img src="media/cordiona-logo.webp" alt="Cordiona Fandangueira" width="144" height="48">
-      </a>
-      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-navigation">
-        <span></span><span></span><span></span>
-      </button>
+      <a class="brand" href="#topo" aria-label="Cordiona Fandangueira — início"><img src="media/cordiona-logo.webp" alt="Cordiona Fandangueira" width="144" height="48"></a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-navigation"><span></span><span></span><span></span></button>
       <nav id="primary-navigation" class="primary-nav" aria-label="Navegação principal">
-        <a href="#banda">A banda</a>
-        <a href="#estrutura">Estrutura</a>
-        <a href="#som">Ouça e assista</a>
-        <a href="#agenda">Agenda</a>
-        <a class="nav-cta" href="mailto:contato@cordionafandangueira.com?subject=Contrata%C3%A7%C3%A3o%20Cordiona%20Fandangueira">Contrate a banda <span aria-hidden="true">↗</span></a>
+        <a href="#agenda">Agenda de bailes</a><a href="#ao-vivo">No palco</a><a href="#banda">A Cordiona</a><a href="#estrutura">Estrutura</a>
+        <a class="nav-cta" href="mailto:contato@cordionafandangueira.com?subject=Baile%20com%20a%20Cordiona"><span>✳</span> Chama pro baile</a>
       </nav>
     </div>
   </header>
 
-  <main id="conteudo">
+  <main id="conteudo" class="poster-site">
     <section class="hero" id="topo" aria-labelledby="hero-title">
-      <div class="hero-media" aria-hidden="true">
-        <img src="media/cordiona-stage.webp" alt="" width="1600" height="900" fetchpriority="high" decoding="async">
-        <span class="hero-shade"></span>
-        <span class="hero-grain"></span>
+      <div class="hero-copy">
+        <div class="hero-printline"><span>GRANDE BAILE</span><span class="print-star">✳</span><span>MÚSICA GAÚCHA AO VIVO</span></div>
+        <p class="hero-kicker">Cordiona Fandangueira apresenta</p>
+        <h1 id="hero-title">Chamou<br>a <em>gaita?</em><br><span>É baile.</span></h1>
+        <p class="hero-lead">Da primeira vaneira ao último acorde — um show feito pra levantar o salão.</p>
+        <div class="hero-actions"><a class="button button-sun" href="#agenda">AGENDA DE BAILES <span>↓</span></a><a class="button button-outline" href="#ao-vivo">OUVIR A CORDIONA <span>↓</span></a></div>
+        <div class="hero-bottomline"><span>RIO GRANDE DO SUL</span><span>BAILE, FESTA & TRADIÇÃO</span></div>
+        <img class="corner-engraving corner-left" src="media/gravura-ramo.webp" alt="" aria-hidden="true"><img class="corner-engraving corner-right" src="media/gravura-ramo.webp" alt="" aria-hidden="true">
       </div>
-      <div class="hero-content page-width">
-        <div class="hero-copy">
-          <p class="eyebrow"><span class="eyebrow-mark"></span>Música gaúcha · baile · tradição</p>
-          <h1 id="hero-title">O baile<br>começa na <em>gaita.</em></h1>
-          <p class="hero-lead">A Cordiona Fandangueira leva o som e a energia da música gaúcha para bailes, CTGs, festas e eventos.</p>
-          <div class="hero-actions">
-            <a class="button button-copper" href="mailto:contato@cordionafandangueira.com?subject=Contrata%C3%A7%C3%A3o%20Cordiona%20Fandangueira">Consulte sua data <span aria-hidden="true">↗</span></a>
-            <a class="button button-quiet" href="#som">Conheça o som <span aria-hidden="true">↘</span></a>
-          </div>
-        </div>
-        <div class="hero-caption" aria-hidden="true"><span>RAIZ GAÚCHA</span><span class="caption-rule"></span><span>BAILE DE VERDADE</span></div>
-      </div>
-      <a class="scroll-cue" href="#banda"><span>Descubra a Cordiona</span><span aria-hidden="true">↓</span></a>
+      <div class="hero-photo"><img src="media/cordiona-stage.webp" alt="A Cordiona Fandangueira no palco, em apresentação ao vivo" width="1600" height="900" fetchpriority="high" decoding="async"><div class="photo-caption"><span>✳</span><span>AO VIVO<br>COM A CORDIONA</span></div><span class="photo-frame" aria-hidden="true"></span></div>
+      <div class="hero-edge" aria-hidden="true">ARRASTA PRA BAIXO &nbsp; ↓</div>
     </section>
 
-    <div class="ticker" aria-label="Bailes, CTGs, festas e eventos">
-      <div class="ticker-inner"><span>BAILES</span><i></i><span>CTGs</span><i></i><span>FESTAS</span><i></i><span>EVENTOS</span><i></i><span class="ticker-note">MÚSICA GAÚCHA, DO PRIMEIRO COMPASSO AO ÚLTIMO BIS</span></div>
-    </div>
+    <div class="ribbon" aria-label="Gaita, baile, estrada, festa"><div class="ribbon-inner"><span>GAITA</span><i>✳</i><span>BAILE</span><i>✳</i><span>ESTRADA</span><i>✳</i><span>FESTA</span><i>✳</i><span>GAITA</span><i>✳</i><span>BAILE</span></div></div>
 
-    <section class="intro-section section-pad" id="banda" aria-labelledby="intro-title">
-      <div class="page-width intro-grid">
-        <div class="section-index"><span>01</span><span class="index-line"></span>A BANDA</div>
-        <div class="intro-main">
-          <p class="eyebrow eyebrow-dark">Tradição em movimento</p>
-          <h2 class="display-title" id="intro-title">Música que<br>chama o <em>salão.</em></h2>
-          <div class="intro-bottom"><span class="stamp" aria-hidden="true">CF<br><small>RS</small></span><p>Tem som que é convite: pra dançar, cantar junto e ficar mais um pouco. A Cordiona Fandangueira une identidade gaúcha e presença de palco numa experiência feita para o seu evento.</p></div>
-        </div>
+    <section class="events-section section-pad" id="agenda" aria-labelledby="events-title"><div class="page-width">
+      <div class="section-topline"><span class="section-number">01</span><span class="engraved-rule"></span><span>PRÓXIMOS ENCONTROS</span><span class="section-topline-right">ONDE O BAILE ACONTECE</span></div>
+      <div class="events-layout"><div class="events-heading"><p class="poster-eyebrow">Baile bom se espalha</p><h2 class="poster-title" id="events-title">A próxima<br><em>parada?</em></h2><p class="poster-copy">A agenda da estrada está em atualização. Em breve, novos encontros, salões e cidades por aqui.</p><a class="ink-link" href="mailto:contato@cordionafandangueira.com?subject=Baile%20com%20a%20Cordiona">Quer ver a Cordiona na tua cidade? <span>↗</span></a></div>
+        <div class="event-bill" aria-label="Agenda em atualização"><img class="corner-engraving bill-corner-one" src="media/gravura-ramo.webp" alt="" aria-hidden="true"><img class="corner-engraving bill-corner-two" src="media/gravura-ramo.webp" alt="" aria-hidden="true"><div class="bill-inner"><div class="bill-top"><span>▦ &nbsp;AGENDA DA BANDA</span><span>RS · BR</span></div><div class="bill-divider"><span>✳</span><i></i><span>✳</span></div><img class="bill-medallion" src="media/gravura-acordeon.webp" alt="" aria-hidden="true"><p class="bill-soon">PREPARA A PILCHA</p><h3>Tem baile<br>se armando.</h3><p class="bill-note">Novas datas serão anunciadas por aqui.</p><a class="bill-link" href="mailto:contato@cordionafandangueira.com?subject=Consulta%20de%20disponibilidade">Perguntar sobre uma data <span>→</span></a><div class="bill-bottom"><span>CORDIONA FANDANGUEIRA</span><span>ATÉ LÁ, VAI ENSAIANDO O PASSO</span></div></div></div>
       </div>
-      <div class="page-width values-row">
-        <article class="value-item"><span class="value-number">01 / IDENTIDADE</span><h3>Raiz no compasso</h3><p>Música gaúcha como protagonista, com respeito à tradição e energia para o baile.</p></article>
-        <article class="value-item"><span class="value-number">02 / PRESENÇA</span><h3>O palco em conversa</h3><p>Uma apresentação que aproxima banda e público, do primeiro acorde à última dança.</p></article>
-        <article class="value-item"><span class="value-number">03 / ENCONTRO</span><h3>Feita para reunir</h3><p>Para bailes, CTGs, festas e encontros onde a música é parte central da celebração.</p></article>
-      </div>
-    </section>
+    </div></section>
 
-    <section class="story-section" aria-labelledby="story-title">
-      <div class="story-texture" aria-hidden="true"></div>
-      <div class="story-content page-width">
-        <div class="section-index"><span>MEMÓRIA</span><span class="index-line"></span>ESTRADA & TRADIÇÃO</div>
-        <div class="story-statement"><p class="eyebrow">Uma história que se vive no salão</p><h2 class="display-title" id="story-title">Raiz na música.<br>Olho no <em>presente.</em></h2><p>A música gaúcha atravessa gerações porque continua acontecendo: no encontro, no compasso e em cada salão que se abre para o baile.</p></div>
-        <span class="story-mark" aria-hidden="true">CF <i>✳</i> RS</span>
-      </div>
-    </section>
+    <section class="live-section section-pad" id="ao-vivo" aria-labelledby="live-title"><div class="page-width">
+      <div class="section-topline"><span class="section-number">02</span><span class="engraved-rule"></span><span>SEM ENSAIO PRA FICAR PARADO</span><span class="section-topline-right">SOM & IMAGEM</span></div>
+      <div class="live-heading"><h2 class="poster-title" id="live-title">Bateu a <em>saudade?</em></h2><span class="live-stamp">REGISTRO<br>AO VIVO<br><b>✳</b></span></div>
+      <div class="live-grid"><article class="live-video"><div class="live-video-head"><span>◉ &nbsp;PUXA O SOM</span><span>CORDIONA FANDANGUEIRA</span></div><div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/_RenQ3ezPZk" title="Apresentação ao vivo da Cordiona Fandangueira no YouTube" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><a class="chalk-link" href="https://www.youtube.com/watch?v=_RenQ3ezPZk" target="_blank" rel="noopener noreferrer">Ver mais no YouTube <span>↗</span></a></article>
+      <aside class="live-music"><div class="music-illustration"><img src="media/gravura-acordeon.webp" alt="" aria-hidden="true"><span class="music-banner">SOM DE<br>BAILE</span><span class="music-spark">✳</span></div><div class="music-content"><p class="poster-eyebrow">Faz companhia na estrada</p><h3>Escuta e vem.</h3><p>Encontre a Cordiona nas plataformas.</p><iframe class="spotify-embed" src="https://open.spotify.com/embed/artist/1q0jq42nu8bgWpz3cPhahD?utm_source=generator&amp;theme=0" title="Cordiona Fandangueira no Spotify" height="152" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe><a class="ink-link" href="https://link.deezer.com/s/344RGLC0RgHwqJ9lhP67M" target="_blank" rel="noopener noreferrer">Também no Deezer <span>↗</span></a></div></aside></div>
+    </div></section>
 
-    <section class="structure-section section-pad" id="estrutura" aria-labelledby="structure-title">
-      <div class="page-width structure-layout">
-        <div class="structure-copy">
-          <div class="section-index"><span>02</span><span class="index-line"></span>ESTRUTURA</div>
-          <p class="eyebrow">O show começa antes do palco</p>
-          <h2 class="display-title" id="structure-title">Tudo no tom<br>do seu <em>evento.</em></h2>
-          <p class="section-copy">Cada baile tem seu espaço, seu público e seu jeito. O planejamento da apresentação considera o local e o formato do evento — da equipe e dos instrumentos à estrutura técnica e à logística.</p>
-          <a class="text-link" href="mailto:contato@cordionafandangueira.com?subject=Estrutura%20para%20evento">Converse sobre a estrutura <span aria-hidden="true">↗</span></a>
-        </div>
-        <div class="structure-list">
-          <article class="structure-item"><span class="structure-icon" aria-hidden="true">♫</span><div><h3>Som & ferragens</h3><p>Planejamento técnico alinhado ao espaço e ao formato do baile.</p></div><span class="structure-number">01</span></article>
-          <article class="structure-item"><span class="structure-icon" aria-hidden="true">♬</span><div><h3>Instrumentos</h3><p>Os timbres que dão identidade à música gaúcha no palco.</p></div><span class="structure-number">02</span></article>
-          <article class="structure-item"><span class="structure-icon" aria-hidden="true">✳</span><div><h3>Banda & equipe</h3><p>Músicos e equipe técnica trabalhando em conjunto.</p></div><span class="structure-number">03</span></article>
-          <article class="structure-item"><span class="structure-icon" aria-hidden="true">↗</span><div><h3>Estrada & transporte</h3><p>Logística conversada de acordo com a cidade e a data.</p></div><span class="structure-number">04</span></article>
-        </div>
-      </div>
-    </section>
+    <section class="band-section section-pad" id="banda" aria-labelledby="band-title"><div class="page-width band-layout"><div class="section-topline"><span class="section-number">03</span><span class="engraved-rule"></span><span>DA NOSSA TERRA, PRO TEU SALÃO</span></div><div class="band-copy"><p class="hero-kicker">A Cordiona é</p><h2 class="poster-title" id="band-title">Gaita no peito.<br><em>Baile no sangue.</em></h2><p>Música gaúcha ao vivo, feita pra juntar gente, puxar a dança e deixar história boa pra contar depois. O resto? É só abrir espaço no salão.</p></div><div class="band-seal"><img src="media/gravura-acordeon.webp" alt="" aria-hidden="true"><span>CORDIONA<br>FANDANGUEIRA<br><b>✳ RS ✳</b></span></div></div></section>
 
-    <section class="listen-section section-pad" id="som" aria-labelledby="listen-title">
-      <div class="page-width">
-        <div class="listen-heading"><div><div class="section-index"><span>03</span><span class="index-line"></span>SOM & IMAGEM</div><p class="eyebrow">Aumente o volume</p><h2 class="display-title" id="listen-title">Sinta o <em>baile.</em></h2></div><p class="listen-aside">Um acorde diz muito.<br>Um baile inteiro, ainda mais.</p></div>
-        <div class="listen-grid">
-          <article class="video-feature"><div class="video-label"><span>◉ &nbsp;NO PALCO</span><span>CORDIONA FANDANGUEIRA</span></div><div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/_RenQ3ezPZk" title="Apresentação da Cordiona Fandangueira no YouTube" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><a class="underlined-link" href="https://www.youtube.com/watch?v=_RenQ3ezPZk" target="_blank" rel="noopener noreferrer">Abrir no YouTube <span aria-hidden="true">↗</span></a></article>
-          <aside class="audio-feature" aria-label="Ouça a Cordiona Fandangueira"><div class="audio-art" aria-hidden="true"><span class="audio-orbit orbit-one"></span><span class="audio-orbit orbit-two"></span><span class="audio-disc"><span class="disc-center">♫</span></span><span class="audio-art-label">SOM<br>DE<br>BAILE</span></div><div class="audio-copy"><span class="eyebrow">NA SUA PLAYLIST</span><h3>Escute a banda</h3><p>Encontre a Cordiona Fandangueira nas plataformas de música.</p><iframe class="spotify-embed" src="https://open.spotify.com/embed/artist/1q0jq42nu8bgWpz3cPhahD?utm_source=generator&amp;theme=0" title="Ouça Cordiona Fandangueira no Spotify" height="152" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe><a class="text-link" href="https://link.deezer.com/s/344RGLC0RgHwqJ9lhP67M" target="_blank" rel="noopener noreferrer">Ouvir no Deezer <span aria-hidden="true">↗</span></a></div></aside>
-        </div>
-      </div>
-    </section>
+    <section class="crew-section section-pad" id="estrutura" aria-labelledby="crew-title"><div class="page-width"><div class="section-topline"><span class="section-number">04</span><span class="engraved-rule"></span><span>PRA FAZER O SALÃO TREMER</span><span class="section-topline-right">A ESTRUTURA DO SHOW</span></div><div class="crew-heading"><h2 class="poster-title" id="crew-title">Todo mundo<br>no <em>compasso.</em></h2><p>Som, instrumentos, equipe técnica e estrada — cada baile pede seu ajuste.</p></div><div class="crew-grid"><article class="crew-card"><span class="crew-symbol">♫</span><h3>Som & ferragens</h3><p>O peso do palco, na medida do salão.</p><span class="crew-index">01</span></article><article class="crew-card"><span class="crew-symbol">♬</span><h3>Instrumentos</h3><p>O timbre que puxa a dança.</p><span class="crew-index">02</span></article><article class="crew-card"><span class="crew-symbol">✳</span><h3>Banda & equipe</h3><p>Músicos e técnica afinados no mesmo tom.</p><span class="crew-index">03</span></article><article class="crew-card"><span class="crew-symbol">➜</span><h3>Estrada & transporte</h3><p>A logística se acerta com cada destino.</p><span class="crew-index">04</span></article></div></div></section>
 
-    <section class="agenda-section section-pad" id="agenda" aria-labelledby="agenda-title">
-      <div class="page-width agenda-grid">
-        <div class="agenda-heading"><div class="section-index"><span>04</span><span class="index-line"></span>AGENDA</div><p class="eyebrow eyebrow-dark">Próximos encontros</p><h2 class="display-title" id="agenda-title">A próxima data<br>pode ser a <em>sua.</em></h2><p class="section-copy">Consulte a disponibilidade da banda para bailes, CTGs, festas e eventos.</p></div>
-        <div class="agenda-paper"><div class="paper-topline"><span>▦ &nbsp;AGENDA DA BANDA</span><span>RIO GRANDE DO SUL</span></div><div class="paper-rule"></div><div class="agenda-empty"><span class="empty-mark" aria-hidden="true">✓</span><p class="eyebrow eyebrow-dark">DATAS SOB CONSULTA</p><h3>Vamos encontrar<br>um dia para o baile.</h3><p>Fale com a banda e consulte a disponibilidade para a sua cidade e evento.</p><a class="paper-button" href="mailto:contato@cordionafandangueira.com?subject=Consulta%20de%20disponibilidade">Consultar uma data <span aria-hidden="true">→</span></a></div><div class="paper-bottom"><span>CORDIONA FANDANGUEIRA</span><span>ANOTAÇÃO DE ESTRADA Nº 01</span></div></div>
-      </div>
-    </section>
-
-    <section class="contact-section" id="contrate" aria-labelledby="contact-title"><div class="page-width contact-layout"><div><p class="eyebrow"><span class="eyebrow-mark"></span>O PRÓXIMO BAILE COMEÇA AQUI</p><h2 id="contact-title">Sua festa.<br>Nosso <em>compasso.</em></h2></div><div class="contact-action"><p>Conte a data, a cidade e o formato do evento. A conversa começa por aí.</p><a class="button button-copper" href="mailto:contato@cordionafandangueira.com?subject=Contrata%C3%A7%C3%A3o%20Cordiona%20Fandangueira&amp;body=Ol%C3%A1!%20Gostaria%20de%20consultar%20a%20disponibilidade%20da%20banda.%0A%0AData%3A%0ACidade%3A%0ALocal%20do%20evento%3A">Pedir uma proposta <span aria-hidden="true">↗</span></a><span class="contact-footnote">♫ &nbsp;Música gaúcha para o seu evento</span></div></div></section>
+    <section class="last-call" aria-labelledby="last-call-title"><div class="last-call-inner page-width"><img class="corner-engraving last-corner" src="media/gravura-ramo.webp" alt="" aria-hidden="true"><p class="hero-kicker">Tem um salão esperando</p><h2 id="last-call-title">Chama a <em>Cordiona.</em></h2><p>Baile, festa, CTG ou encontro da comunidade. A gente conversa sobre a tua cidade.</p><a class="button button-sun" href="mailto:contato@cordionafandangueira.com?subject=Baile%20com%20a%20Cordiona"><span>✳</span> Fala com a banda <span>↗</span></a></div></section>
   </main>
 
-  <footer class="site-footer"><div class="page-width footer-main"><a class="footer-brand" href="#topo" aria-label="Voltar ao início"><img src="media/cordiona-logo.webp" alt="Cordiona Fandangueira" width="144" height="48" loading="lazy"><span>Música gaúcha. Baile de verdade.</span></a><div class="footer-links"><a href="https://www.youtube.com/watch?v=_RenQ3ezPZk" target="_blank" rel="noopener noreferrer">YouTube <span aria-hidden="true">↗</span></a><a href="https://open.spotify.com/artist/1q0jq42nu8bgWpz3cPhahD" target="_blank" rel="noopener noreferrer">Spotify <span aria-hidden="true">↗</span></a><a href="https://link.deezer.com/s/344RGLC0RgHwqJ9lhP67M" target="_blank" rel="noopener noreferrer">Deezer <span aria-hidden="true">↗</span></a><a href="mailto:contato@cordionafandangueira.com">Contato <span aria-hidden="true">↗</span></a></div></div><div class="page-width footer-bottom"><span>© <span id="year"></span> CORDIONA FANDANGUEIRA</span><span>FEITO DE TRADIÇÃO E ESTRADA <span class="footer-star">✳</span></span></div></footer>
+  <footer class="site-footer"><div class="page-width footer-main"><a class="footer-brand" href="#topo" aria-label="Voltar ao início"><img src="media/cordiona-logo.webp" alt="Cordiona Fandangueira" width="144" height="48" loading="lazy"><span>Baile bom é baile junto.</span></a><div class="footer-links"><a href="https://www.youtube.com/watch?v=_RenQ3ezPZk" target="_blank" rel="noopener noreferrer">YouTube ↗</a><a href="https://open.spotify.com/artist/1q0jq42nu8bgWpz3cPhahD" target="_blank" rel="noopener noreferrer">Spotify ↗</a><a href="https://link.deezer.com/s/344RGLC0RgHwqJ9lhP67M" target="_blank" rel="noopener noreferrer">Deezer ↗</a><a href="mailto:contato@cordionafandangueira.com">Contato ↗</a></div></div><div class="page-width footer-bottom"><span>© <span id="year"></span> CORDIONA FANDANGUEIRA</span><span>FEITO DE GAITA, TINTA & ESTRADA <span class="footer-star">✳</span></span></div></footer>
   <script src="site.js" defer></script>
 </body>
 </html>

@@ -5,9 +5,9 @@ Site institucional estático da banda. A página pública é HTML, CSS e JavaScr
 ## Estrutura
 
 - `index.html` — página inicial pública e metadados sociais.
-- `site.css` — tokens e estilos responsivos: carvão, creme, verde-floresta e cobre; sem animações ou motion guiado por rolagem.
+- `site.css` — cartaz responsivo de baile, com paleta tijolo, papel e amarelo-ouro, tipografia condensada e ornamentos de xilogravura; sem animações ou motion guiado por rolagem.
 - `site.js` — menu mobile acessível e ano do rodapé.
-- `media/` — logo, foto real do palco e textura editorial otimizada em WebP.
+- `media/` — logo e foto real do palco, mais gravuras decorativas originais de ramo e acordeão, otimizadas em WebP.
 - `admindabanda/` — painel legado, preservado e não modificado neste redesign.
 - `calendar-proxy.js` — integração legada do calendário; não é necessária para a página estática atual.
 
@@ -15,7 +15,7 @@ Site institucional estático da banda. A página pública é HTML, CSS e JavaScr
 
 O vídeo do YouTube, o artista no Spotify e o link do Deezer foram mantidos a partir do site existente. A página não exibe eventos com datas inventadas: a agenda informa que as datas estão sob consulta e encaminha para o contato comercial. Antes de publicar, confirme se `contato@cordionafandangueira.com` é o endereço comercial correto e atualize textos, meios de contato e agenda conforme necessário.
 
-A foto do palco e o logo são assets já existentes no repositório. A textura histórica é uma composição editorial decorativa, não uma fotografia documental. Nenhuma história, data ou ônibus real foi inventado.
+A foto do palco e o logo são assets já existentes no repositório. As gravuras são enfeites ilustrativos inspirados em impressos antigos, não registros documentais. A agenda permanece em atualização até a banda fornecer datas confirmadas. Nenhuma história, data ou ônibus real foi inventado.
 
 ## Pré-visualização local
 
