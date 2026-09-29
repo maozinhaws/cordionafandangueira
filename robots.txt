@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://cordiona-fandangueira.wagner-maniatec.chatgpt.site/sitemap.xml
+
