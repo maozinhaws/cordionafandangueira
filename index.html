@@ -1,178 +1,115 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cordiona Fandangueira — Música gaúcha para palcos que ficam na memória</title>
-  <meta name="description" content="Cordiona Fandangueira. Música, história, agenda e contratação em uma experiência compacta e imersiva.">
-  <meta name="theme-color" content="#2a070d">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%232A070D'/%3E%3Ctext x='7' y='25' font-family='Georgia' font-size='27' font-weight='bold' fill='%23F2C300'%3EC%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="premium.css">
-  <link rel="manifest" href="manifest.webmanifest">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#350711">
+  <meta name="description" content="Cordiona Fandangueira — vaneira, bugio, xamamé e trancão gaúcho. Música ao vivo, agenda, estrada e a estrutura da banda.">
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="pt_BR">
-  <meta property="og:title" content="Cordiona Fandangueira">
-  <meta property="og:description" content="Música gaúcha para palcos que ficam na memória.">
-  <meta property="og:image" content="og.png">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"MusicGroup","name":"Cordiona Fandangueira","genre":"Música gaúcha","areaServed":"Sul do Brasil"}</script>
+  <meta property="og:title" content="Cordiona Fandangueira — A gaita chama. O salão responde.">
+  <meta property="og:description" content="Música gaúcha, palco, estrada e baile. Conheça a Cordiona Fandangueira.">
+  <meta property="og:image" content="media/cordiona-stage.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.youtube-nocookie.com">
+  <link rel="preload" as="image" href="media/cordiona-stage.webp" fetchpriority="high">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <title>Cordiona Fandangueira — música gaúcha ao vivo</title>
 </head>
-<body>
-  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<body class="portal-site portal-entry-locked">
+  <a class="portal-skip-link" href="#music">Pular para a música</a>
 
-  <div class="intro" id="intro" aria-label="Abertura Cordiona Fandangueira">
-    <video class="intro-video" id="intro-video" muted playsinline preload="metadata" poster="assets/show.webp" src="assets/show.mp4"></video>
-    <div class="intro-shade"></div>
-    <img class="intro-logo" src="assets/logo.webp" alt="Cordiona Fandangueira" width="350" height="110">
-    <button class="intro-skip" id="intro-skip" type="button">Pular abertura</button>
-  </div>
-
-  <header class="site-header" id="inicio">
-    <a class="brand" href="#inicio" aria-label="Cordiona Fandangueira, início"><img src="assets/logo.webp" alt="Cordiona Fandangueira" width="350" height="110"></a>
-    <nav class="desktop-nav" aria-label="Navegação principal">
-      <button type="button" data-open="musica">Música</button>
-      <button type="button" data-open="agenda">Agenda</button>
-      <button type="button" data-open="historia">Nossa história</button>
+  <header class="portal-header">
+    <a class="portal-brand" href="#topo" aria-label="Cordiona Fandangueira — início"><img src="media/cordiona-logo.webp" alt="Cordiona Fandangueira" width="156" height="54"></a>
+    <nav class="portal-nav" id="site-nav" aria-label="Navegação principal">
+      <a href="#music" data-enter-target="music">Música</a>
+      <a href="#agenda" data-enter-target="agenda">Agenda</a>
+      <a href="#estrada" data-enter-target="estrada">Estrada</a>
+      <a href="#banda" data-enter-target="banda">A banda</a>
+      <a href="#estrutura" data-enter-target="estrutura">Estrutura</a>
     </nav>
-    <button class="button button-gold header-booking" type="button" data-contact>Contratar show <span>↗</span></button>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu <span>+</span></button>
-    <nav class="mobile-menu" id="mobile-menu" hidden aria-label="Navegação mobile">
-      <button type="button" data-open="musica">Música / mídia</button>
-      <button type="button" data-open="agenda">Agenda</button>
-      <button type="button" data-open="historia">Nossa história</button>
-      <button type="button" data-contact>Contratar show ↗</button>
-    </nav>
+    <button class="portal-menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-nav"><span aria-hidden="true">☰</span></button>
   </header>
 
-  <main id="conteudo">
-    <section class="hero section-pad" aria-labelledby="hero-title">
-      <div class="hero-image" aria-hidden="true"><img src="assets/galpao.png" alt=""></div>
-      <div class="hero-shade" aria-hidden="true"></div>
-      <div class="hero-motion" aria-hidden="true">
-        <span class="motion-orbit motion-orbit-a"></span><span class="motion-orbit motion-orbit-b"></span><span class="motion-spark motion-spark-a"></span><span class="motion-spark motion-spark-b"></span>
+  <section class="welcome-screen" id="topo" aria-labelledby="welcome-title">
+    <div class="welcome-video" aria-hidden="true">
+      <iframe data-autoplay-src="https://www.youtube-nocookie.com/embed/_RenQ3ezPZk?autoplay=1&amp;mute=1&amp;controls=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1&amp;loop=1&amp;playlist=_RenQ3ezPZk" title="" tabindex="-1" allow="autoplay; encrypted-media; picture-in-picture" loading="eager"></iframe>
+      <img src="media/cordiona-stage.webp" alt="" fetchpriority="high" decoding="async">
+    </div>
+    <div class="welcome-shade" aria-hidden="true"></div>
+    <div class="welcome-content">
+      <div class="welcome-meta"><span class="live-dot"></span> UM BAILE DA CORDIONA <i></i> MÚSICA GAÚCHA AO VIVO</div>
+      <p class="welcome-kicker">Vaneira · bugio · xamamé · trancão gaúcho</p>
+      <h1 id="welcome-title">Quando a<br class="desktop-break"> gaita <em>chama,</em><br>o salão responde.</h1>
+      <div class="welcome-actions">
+        <button class="welcome-primary" type="button" data-enter>Conheça detalhes da banda <span aria-hidden="true">↘</span></button>
+        <a class="welcome-listen" href="https://www.youtube.com/watch?v=_RenQ3ezPZk" target="_blank" rel="noopener noreferrer"><span class="play-disc" aria-hidden="true">▶</span> Ver o show com som <span aria-hidden="true">↗</span></a>
       </div>
-      <div class="hero-content reveal">
-        <p class="kicker">CORDIONA FANDANGUEIRA · MÚSICA GAÚCHA</p>
-        <h1 id="hero-title">Um site rápido.<br><em>Uma história grande.</em></h1>
-        <p class="hero-lede">Entre pela música, acompanhe a trajetória da Cordiona e encontre em poucos segundos o que importa.</p>
-        <div class="hero-actions hub-actions">
-          <button class="hub-card" type="button" data-open="musica"><span>01</span><strong>Música / Mídia</strong><small>Clipes, Spotify, Deezer</small></button>
-          <button class="hub-card" type="button" data-open="agenda"><span>02</span><strong>Agenda</strong><small>Próximos shows e calendário</small></button>
-          <button class="hub-card" type="button" data-open="historia"><span>03</span><strong>Nossa História</strong><small>Trajetória, integrantes e memória</small></button>
-          <button class="hub-card hub-card-cta" type="button" data-contact><span>04</span><strong>Contratar Show</strong><small>Disponibilidade e orçamento</small></button>
-        </div>
+      <div class="welcome-quick" aria-label="Acessos rápidos">
+        <button type="button" data-enter-target="music"><span aria-hidden="true">♫</span><span>Música</span></button>
+        <button type="button" data-enter-target="agenda"><span aria-hidden="true">▦</span><span>Agenda</span></button>
+        <button type="button" data-enter-target="estrutura"><span aria-hidden="true">◉</span><span>Estrutura</span></button>
       </div>
-      <div class="hero-meta"><span>01 / HUB</span><span class="meta-line"></span><span>ESCOLHA ONDE ENTRAR</span></div>
+    </div>
+    <div class="welcome-foot"><span>CORDIONA FANDANGUEIRA · RS</span><span>TOQUE PARA ENTRAR <span aria-hidden="true">→</span></span></div>
+    <span class="welcome-mark" aria-hidden="true">CF</span>
+  </section>
+
+  <main class="portal-content" id="portal-content" aria-hidden="true" inert>
+    <section class="music-stage" id="music" aria-labelledby="music-title">
+      <div class="music-stage-photo">
+        <img src="media/cordiona-stage.webp" alt="A Cordiona Fandangueira tocando em um palco iluminado." width="1600" height="900" decoding="async">
+        <div class="stage-shade"></div>
+        <div class="stage-identity"><span class="stage-live"><i></i> SOM DE BAILE · AO VIVO</span><h2 id="music-title">Bota o <em>som.</em><br>Sente a vaneira.</h2><p>Um pouco do palco — o resto é contigo.</p></div>
+        <a class="stage-video-link" href="https://www.youtube.com/watch?v=_RenQ3ezPZk" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">▶</span> Abrir o clipe com áudio <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="music-rail">
+        <div class="rail-label"><span>FAIXAS E CLIPES</span><i></i></div>
+        <a class="music-card spotify-card" href="https://open.spotify.com/artist/1q0jq42nu8bgWpz3cPhahD" target="_blank" rel="noopener noreferrer"><span class="music-disc" aria-hidden="true">♫</span><span class="music-card-copy"><small>OUÇA NA PLATAFORMA</small><strong>Cordiona Fandangueira</strong><span>Spotify · repertório e discos</span></span><span aria-hidden="true">↗</span></a>
+        <a class="music-card deezer-card" href="https://link.deezer.com/s/344RGLC0RgHwqJ9lhP67M" target="_blank" rel="noopener noreferrer"><span class="music-disc" aria-hidden="true">◉</span><span class="music-card-copy"><small>MAIS MÚSICA</small><strong>Encontre a Cordiona</strong><span>Deezer · escutar agora</span></span><span aria-hidden="true">↗</span></a>
+        <a class="all-videos" href="https://www.grupocordiona.com.br/videos" target="_blank" rel="noopener noreferrer">Mais clipes no canal oficial <span aria-hidden="true">→</span></a>
+      </div>
     </section>
 
-    <section class="proof-strip" aria-label="Atalhos rápidos">
-      <div><strong>01</strong><span>música e clipes<br>sem sair do site</span></div>
-      <div><strong>02</strong><span>história com<br>profundidade sob demanda</span></div>
-      <div><strong>03</strong><span>contratação<br>sempre acessível</span></div>
-      <a href="https://www.instagram.com/grupo_cordiona_fandangueira/" target="_blank" rel="noopener">@grupo_cordiona_fandangueira ↗</a>
-    </section>
-  </main>
-
-  <dialog class="detail-dialog" id="detail-musica" aria-labelledby="musica-title">
-    <button class="dialog-close" type="button" aria-label="Fechar">×</button>
-    <section class="detail detail-music" id="musica">
-      <div class="detail-head"><div><p class="kicker">MÚSICA / MÍDIA</p><h2 id="musica-title">Aperte o play.</h2></div><button class="back-home" type="button" data-close-detail>Voltar ao início ↑</button></div>
-      <div class="media-layout">
-        <div class="youtube-stage">
-          <div class="video-shell"><iframe id="youtube-player" title="Clipe da Cordiona Fandangueira" src="https://www.youtube-nocookie.com/embed/_RenQ3ezPZk" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-          <div class="clip-list" aria-label="Lista de clipes">
-            <button class="clip-thumb is-active" type="button" data-youtube="_RenQ3ezPZk"><img src="https://img.youtube.com/vi/_RenQ3ezPZk/hqdefault.jpg" alt=""><span>Clipe em destaque</span></button>
-            <button class="clip-thumb" type="button" data-youtube="_RenQ3ezPZk"><img src="assets/show.webp" alt=""><span>Ao vivo / registro</span></button>
+    <section class="agenda-section" id="agenda" aria-labelledby="agenda-heading">
+      <div class="agenda-backdrop" aria-hidden="true"><picture><source media="(max-width: 700px)" srcset="media/agenda-silhouettes.webp"><img src="media/agenda-silhouettes-wide.webp" alt="" width="1600" height="900" loading="lazy" decoding="async"></picture><div class="agenda-light"></div></div>
+      <div class="agenda-heading"><span class="section-eyebrow"><i></i> A GENTE SE ENCONTRA NA ESTRADA</span><h2 id="agenda-heading">Próximo <em>baile.</em></h2><p>Folheia a agenda. Escolhe o teu mês.</p></div>
+      <div class="agenda-layout">
+        <div class="agenda-roster" aria-label="Formação musical representada na ilustração"><span class="roster-label">NO PALCO</span><ul><li>Guitarra</li><li>Contrabaixo</li><li>Sanfona</li><li>Afuxé</li><li>Tamborim</li><li>Caixa e prato</li></ul><small>ILUSTRAÇÃO CONCEITUAL · AS SILHUETAS NÃO REPRESENTAM OS INTEGRANTES REAIS</small></div>
+        <div class="calendar-side">
+          <div class="event-paper turn-none" tabindex="0" aria-label="Agenda mensal; use as setas para mudar de mês">
+            <div class="paper-topline"><span>CORDIONA · ROTEIRO DE BAILES</span><span>RS / BR</span></div>
+            <div class="month-controls"><button type="button" class="month-button month-prev" aria-label="Ver mês anterior"><span aria-hidden="true">←</span></button><div class="month-name" aria-live="polite"><small>AGENDA</small><h3></h3></div><button type="button" class="month-button month-next" aria-label="Ver próximo mês"><span aria-hidden="true">→</span></button></div>
+            <div class="paper-rule"><span>✳</span><i></i><span>✳</span></div>
+            <div class="empty-agenda"><span class="empty-star">✳</span><p>Nenhuma data confirmada<br>para este mês.</p><small>Quando o próximo baile estiver na estrada, aparece aqui.</small></div>
+            <a class="agenda-contact" href="mailto:contato@cordionafandangueira.com?subject=Baile%20com%20a%20Cordiona&amp;body=Ol%C3%A1!%20Quero%20conversar%20sobre%20uma%20data%20para%20a%20Cordiona.%0A%0ACidade%3A%0AData%3A%0AEvento%3A">Perguntar sobre apresentações <span aria-hidden="true">↗</span></a>
+            <div class="paper-foot"><span>FANDANGUEANDO POR AÍ</span><span>VIRA A FOLHA</span></div>
           </div>
-        </div>
-        <div class="platform-stack">
-          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/1q0jq42nu8bgWpz3cPhahD?utm_source=generator" width="100%" height="152" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Cordiona no Spotify"></iframe>
-          <a class="platform-card" href="https://link.deezer.com/s/344RGLC0RgHwqJ9lhP67M" target="_blank" rel="noopener"><strong>Deezer</strong><span>Ouvir na plataforma ↗</span></a>
-          <a class="platform-card" href="https://music.apple.com/us/album/pra-quem-gosta-de-vaneira/1475515422" target="_blank" rel="noopener"><strong>Apple Music</strong><span>Ouvir na plataforma ↗</span></a>
+          <p class="agenda-hint"><span aria-hidden="true">←</span> TOCA NAS SETAS OU DESLIZA A FOLHA <span aria-hidden="true">→</span></p>
         </div>
       </div>
+      <span class="agenda-index" aria-hidden="true">01 / 03</span>
     </section>
-  </dialog>
 
-  <dialog class="detail-dialog" id="detail-agenda" aria-labelledby="agenda-title">
-    <button class="dialog-close" type="button" aria-label="Fechar">×</button>
-    <section class="detail" id="agenda">
-      <div class="detail-head"><div><p class="kicker">AGENDA</p><h2 id="agenda-title">Próximos encontros.</h2></div><button class="back-home" type="button" data-close-detail>Voltar ao início ↑</button></div>
-      <p class="detail-intro">Agenda compacta, com acesso rápido aos próximos shows e opção de adicionar cada data ao calendário.</p>
-      <div class="agenda-list">
-        <article class="agenda-item" data-event-title="Cordiona Fandangueira" data-event-date="2026-11-14" data-event-location="Curitiba, PR">
-          <div><time datetime="2026-11-14">14 NOV 2026</time><strong>Curitiba, PR</strong><span>Evento a confirmar</span></div>
-          <div class="calendar-actions"><a class="button" data-google-calendar target="_blank" rel="noopener">Google Calendar ↗</a><button class="button" type="button" data-ics>Apple / outros (.ics)</button></div>
-        </article>
+    <section class="road-section" id="estrada" aria-labelledby="road-title">
+      <div class="section-topline"><span class="section-eyebrow"><i></i> MÚSICA TAMBÉM É ESTRADA</span><span class="section-index">02 / 03</span></div>
+      <div class="road-heading"><div><h2 id="road-title">Entre um baile<br>e outro, <em>rodamos.</em></h2><p>Registros públicos que acompanham a história da Cordiona pela estrada.</p></div><div class="road-control"><button type="button" class="bus-prev" aria-label="Mostrar registro anterior"><span aria-hidden="true">←</span></button><span class="bus-count"></span><button type="button" class="bus-next" aria-label="Mostrar próximo registro"><span aria-hidden="true">→</span></button></div></div>
+      <div class="bus-showcase">
+        <article class="bus-frame bus-current" data-index="0"><a class="bus-photo" href="https://www.youtube.com/watch?v=EkjcIhf3Ohs" target="_blank" rel="noopener noreferrer"><img src="media/cordiona-bus-archive.webp" alt="Miniatura de arquivo com ônibus identificado como Grupo Cordiona em vídeo publicado em 2020." width="480" height="360" loading="lazy"><span class="bus-play" aria-hidden="true">▶</span><span class="bus-photo-label">ABRIR REGISTRO ↗</span></a><div class="bus-caption"><span class="section-eyebrow"><i></i> ARQUIVO PÚBLICO · 2020</span><h3>Grupo Cordiona no Bus Top Show</h3><a href="https://www.youtube.com/watch?v=EkjcIhf3Ohs" target="_blank" rel="noopener noreferrer">Abrir fonte no YouTube <span aria-hidden="true">↗</span></a></div></article>
+        <article class="bus-frame" data-index="1" aria-hidden="true"><a class="bus-photo" href="https://www.youtube.com/watch?v=l3spAtqK77A" target="_blank" rel="noopener noreferrer" tabindex="-1"><img src="media/cordiona-bus-highway.webp" alt="Miniatura de vídeo público intitulado Ônibus Comil HD do Grupo Cordiona." width="480" height="360" loading="lazy"><span class="bus-play" aria-hidden="true">▶</span><span class="bus-photo-label">ABRIR REGISTRO ↗</span></a><div class="bus-caption"><span class="section-eyebrow"><i></i> REGISTRO DE ESTRADA</span><h3>Ônibus Comil HD do Grupo Cordiona</h3><a href="https://www.youtube.com/watch?v=l3spAtqK77A" target="_blank" rel="noopener noreferrer" tabindex="-1">Ver o registro no YouTube <span aria-hidden="true">↗</span></a></div></article>
       </div>
+      <p class="bus-note">Miniaturas e títulos de vídeos públicos, mantidos com link para a fonte. A identificação do veículo atualmente em uso deve ser confirmada pela banda.</p>
     </section>
-  </dialog>
 
-  <dialog class="detail-dialog" id="detail-historia" aria-labelledby="historia-title">
-    <button class="dialog-close" type="button" aria-label="Fechar">×</button>
-    <section class="detail history-detail" id="historia">
-      <div class="detail-head"><div><p class="kicker">NOSSA HISTÓRIA</p><h2 id="historia-title">Estrada, palco e memória.</h2></div><button class="back-home" type="button" data-close-detail>Voltar ao início ↑</button></div>
-      <div class="history-intro-grid">
-        <div class="history-copy"><p class="lead-copy">A Cordiona cresce na estrada. A história da banda pode ser lida como uma sequência de fases, pessoas, encontros e quilômetros rodados.</p><p>Este espaço reúne origem, evolução, imagens históricas e participações especiais. A narrativa visual deixa de ser uma sequência de cards e passa a funcionar como capítulos.</p></div>
-        <div class="bus-timeline" aria-label="Evolução visual dos ônibus da banda">
-          <div class="bus-stage"><span>ÔNIBUS / FASE 01</span><div class="bus-shape bus-old"></div></div>
-          <div class="bus-line"></div>
-          <div class="bus-stage"><span>ÔNIBUS / FASE ATUAL</span><div class="bus-shape bus-current"></div></div>
-        </div>
-      </div>
+    <section class="band-section" id="banda" aria-labelledby="band-title"><div class="band-photo"><img src="media/cordiona-stage.webp" alt="Registro de palco da banda" width="1600" height="900" loading="lazy"><span>CORDIONA · AO VIVO</span></div><div class="band-copy"><span class="section-eyebrow"><i></i> A MÚSICA SEGUE</span><h2 id="band-title">Raiz no peito.<br><em>Baile adiante.</em></h2><p>O Grupo Cordiona segue o legado musical de Porca Véia levando a música gaúcha aos palcos e salões. Vaneira, bugio, xamamé, trancão: cada noite tem seu próprio passo.</p><a class="band-link" href="https://www.grupocordiona.com.br/videos" target="_blank" rel="noopener noreferrer">Ver clipes e bastidores no site oficial <span aria-hidden="true">↗</span></a></div></section>
 
-      <div class="history-block">
-        <div class="section-label"><span>01</span><span class="label-rule"></span><span>INTEGRANTES ATUAIS</span></div>
-        <div class="people-grid">
-          <article class="person-card"><img src="assets/group.webp" alt="Integrantes atuais da Cordiona Fandangueira"><div><strong>Cordiona Fandangueira</strong><span>Formação atual</span><small>Atual</small></div></article>
-        </div>
-      </div>
+    <section class="structure-section" id="estrutura" aria-labelledby="structure-title"><div class="structure-intro"><span class="section-eyebrow"><i></i> NO MESMO COMPASSO</span><h2 id="structure-title">A estrutura<br>faz o <em>show.</em></h2><p>Do primeiro teste de som ao último acorde do baile.</p></div><div class="structure-list"><article class="structure-item"><span class="structure-number">01</span><span class="structure-glyph" aria-hidden="true">♫</span><div><h3>Som e ferragens</h3><p>Estrutura de palco e sonorização organizadas para o salão e para a festa.</p></div><span class="structure-arrow" aria-hidden="true">↗</span></article><article class="structure-item"><span class="structure-number">02</span><span class="structure-glyph" aria-hidden="true">♬</span><div><h3>Instrumentos</h3><p>O timbre da gaita, da base e da percussão puxando o baile.</p></div><span class="structure-arrow" aria-hidden="true">↗</span></article><article class="structure-item"><span class="structure-number">03</span><span class="structure-glyph" aria-hidden="true">◉</span><div><h3>Banda e técnica</h3><p>Músicos e equipe técnica trabalhando no mesmo compasso.</p></div><span class="structure-arrow" aria-hidden="true">↗</span></article><article class="structure-item"><span class="structure-number">04</span><span class="structure-glyph" aria-hidden="true">→</span><div><h3>Estrada e transporte</h3><p>A logística acompanha cada palco, cidade e encontro.</p></div><span class="structure-arrow" aria-hidden="true">↗</span></article></div></section>
 
-      <div class="history-block">
-        <div class="section-label"><span>02</span><span class="label-rule"></span><span>PARTICIPAÇÕES ESPECIAIS</span></div>
-        <p class="detail-intro">Área reservada para registrar encontros, colaborações e participações especiais que fizeram parte da trajetória da banda.</p>
-      </div>
+    <section class="closing-stage"><div class="closing-art" aria-hidden="true"><span>⟡</span><p>ATÉ O PRÓXIMO<br><strong>FANDANGO</strong></p></div><div class="closing-copy"><span class="section-eyebrow"><i></i> QUANDO A GAITA CHAMAR</span><h2>O baile é <em>junto.</em></h2><a href="mailto:contato@cordionafandangueira.com?subject=Baile%20com%20a%20Cordiona&amp;body=Ol%C3%A1!%20Quero%20conversar%20sobre%20uma%20data%20para%20a%20Cordiona.%0A%0ACidade%3A%0AData%3A%0AEvento%3A">Fale com a produção <span aria-hidden="true">↗</span></a></div></section>
 
-      <div class="history-block memorial">
-        <div class="section-label"><span>03</span><span class="label-rule"></span><span>QUEM FEZ PARTE DA NOSSA HISTÓRIA</span></div>
-        <blockquote>“A Cordiona também é feita por todos que, em algum momento, dividiram conosco o palco, a estrada e a música.”</blockquote>
-        <button class="memorial-entry" type="button" id="open-memorial"><img src="assets/band.webp" alt=""><span><strong>Abrir álbum de homenagem</strong><small>Fotos, funções e períodos de quem já passou pela Cordiona.</small></span></button>
-      </div>
-    </section>
-  </dialog>
-
-  <dialog class="detail-dialog memorial-dialog" id="memorial-dialog" aria-labelledby="memorial-title">
-    <button class="dialog-close" type="button" aria-label="Fechar">×</button>
-    <section class="detail">
-      <div class="detail-head"><div><p class="kicker">ÁLBUM DE HOMENAGEM</p><h2 id="memorial-title">Quem fez parte da nossa história.</h2></div><button class="back-home" type="button" data-close-detail>Voltar</button></div>
-      <div class="memorial-grid">
-        <article class="memory-card"><img src="assets/band.webp" alt=""><div><strong>Registro histórico</strong><span>Função / instrumento</span><small>Período a cadastrar</small></div></article>
-        <article class="memory-card"><img src="assets/show.webp" alt=""><div><strong>Registro histórico</strong><span>Função / instrumento</span><small>Período a cadastrar</small></div></article>
-      </div>
-    </section>
-  </dialog>
-
-  <dialog id="contact-dialog" aria-labelledby="form-title">
-    <button class="dialog-close" aria-label="Fechar formulário">×</button>
-    <p class="kicker">VAMOS FAZER UM BAILE?</p><h2 id="form-title">Conte seu plano.</h2>
-    <p class="form-intro">Preencha os detalhes e continue a conversa com a banda no WhatsApp.</p>
-    <form id="contact-form">
-      <div class="form-grid">
-        <label>Seu nome *<input name="name" required autocomplete="name" maxlength="100" placeholder="Como podemos te chamar?"></label>
-        <label>Seu WhatsApp *<input name="phone" type="tel" required autocomplete="tel" maxlength="22" placeholder="(DDD) 99999-9999"></label>
-        <label>Cidade e estado *<input name="city" required maxlength="120" placeholder="Ex.: Curitiba, PR"></label>
-        <label>Data do evento<input name="date" type="date"></label>
-        <label>Tipo de evento *<select name="type" required><option value="">Selecione</option><option>Casa de show</option><option>Baile</option><option>Evento em CTG</option><option>Festival</option><option>Festa particular</option><option>Outro</option></select></label>
-        <label>Público estimado<input name="audience" type="number" min="1" placeholder="Número de pessoas"></label>
-        <label class="full">Local e outros detalhes<textarea name="details" rows="3" maxlength="1200" placeholder="Nome do espaço, horário e o que você está planejando."></textarea></label>
-      </div>
-      <details class="message-review"><summary>Revisar mensagem</summary><pre id="message-preview"></pre></details>
-      <a class="button button-gold whatsapp-send" id="whatsapp-send" target="_blank" rel="noopener" href="https://wa.me/5541997790087">Continuar no WhatsApp ↗</a>
-      <p class="form-note">Você confirma o envio no WhatsApp. Estes dados não ficam salvos no site.</p>
-    </form>
-  </dialog>
-
-  <footer class="site-footer"><span>CORDIONA FANDANGUEIRA</span><span>CURITIBA · PARANÁ</span><a href="https://www.instagram.com/grupo_cordiona_fandangueira/" target="_blank" rel="noopener">INSTAGRAM ↗</a><span>© 2026</span></footer>
-  <button class="whatsapp-float" data-contact aria-label="Contratar a banda pelo WhatsApp">WA</button>
-  <script src="app.js" defer></script>
+    <footer class="portal-footer"><a class="footer-brand" href="#topo" aria-label="Voltar ao início"><img src="media/cordiona-logo.webp" alt="Cordiona Fandangueira" width="150" height="50" loading="lazy"></a><div class="footer-links"><a href="https://www.grupocordiona.com.br/videos" target="_blank" rel="noopener noreferrer">Clipes</a><a href="https://open.spotify.com/artist/1q0jq42nu8bgWpz3cPhahD" target="_blank" rel="noopener noreferrer">Spotify</a><a href="https://link.deezer.com/s/344RGLC0RgHwqJ9lhP67M" target="_blank" rel="noopener noreferrer">Deezer</a><a href="mailto:contato@cordionafandangueira.com">Produção</a></div><span>© <span id="year"></span> · CORDIONA FANDANGUEIRA</span></footer>
+  </main>
+  <script src="site.js" defer></script>
 </body>
 </html>
